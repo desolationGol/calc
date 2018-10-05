@@ -62,10 +62,10 @@ public:
         lcdNumber->setFont(font);
         lcdNumber->setFrameShape(QFrame::StyledPanel);
         lcdNumber->setFrameShadow(QFrame::Sunken);
-        lcdNumber->setSmallDecimalPoint(true);
-        lcdNumber->setDigitCount(10);
+        lcdNumber->setSmallDecimalPoint(false);
+        lcdNumber->setDigitCount(15);
         lcdNumber->setMode(QLCDNumber::Dec);
-        lcdNumber->setSegmentStyle(QLCDNumber::Flat);
+        lcdNumber->setSegmentStyle(QLCDNumber::Filled);
         pushButton_ac = new QPushButton(centralWidget);
         pushButton_ac->setObjectName(QStringLiteral("pushButton_ac"));
         pushButton_ac->setGeometry(QRect(0, 40, 61, 61));

@@ -7,9 +7,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowIcon(QPixmap(":/resources/img/icon.png"));
-    setFixedSize(239,339);
-    ui->lcdNumber->setDigitCount(6);
+    setWindowIcon(QPixmap(":/resources/img/icon.png")); // setup window icon
+    setFixedSize(239,339); // size of windowed application
+    
+    ui->lcdNumber->setDigitCount(6); // amount numbers after point
 
     connect(ui->pushButton_0,SIGNAL(clicked()),this,SLOT(digit_numbers()));
     connect(ui->pushButton_1,SIGNAL(clicked()),this,SLOT(digit_numbers()));
@@ -29,13 +30,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::digit_numbers()
+void MainWindow::digit_numbers() // function of call digital input numbers
 {
-    QPushButton *button = (QPushButton *)sender();
+    QPushButton *button = (QPushButton *)sender(); // method to recieve text from buttons
 
     double all_numbers;
 
-    all_numbers = (QString::number(ui->lcdNumber->value())+button->text()).toDouble();
+    all_numbers = (QString::number(ui->lcdNumber->value())+button->text()).toDouble(); // converting input 
 
     ui->lcdNumber->display(QString::number(all_numbers));
     qDebug()<<all_numbers;
