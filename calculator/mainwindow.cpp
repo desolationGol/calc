@@ -159,3 +159,10 @@ QString MainWindow::currentValue()
 {
    return currentNumb=ui->lcdNumber->text();
 }
+
+void MainWindow::on_pushButton_ac_clicked()
+{
+    currentNumb.clear();
+    bufferNumb=0;
+    ui->lcdNumber->setText("0");
+}

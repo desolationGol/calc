@@ -32,6 +32,8 @@ private slots:
     void total();
 
     QString currentValue();
+    void on_pushButton_ac_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
