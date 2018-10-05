@@ -14,7 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLCDNumber>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
@@ -25,7 +25,6 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QLCDNumber *lcdNumber;
     QPushButton *pushButton_ac;
     QPushButton *pushButton_plusminus;
     QPushButton *pushButton_percent;
@@ -45,6 +44,7 @@ public:
     QPushButton *pushButton_7;
     QPushButton *pushButton_mul;
     QPushButton *pushButton_8;
+    QLabel *lcdNumber;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -53,27 +53,14 @@ public:
         MainWindow->resize(239, 339);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        lcdNumber = new QLCDNumber(centralWidget);
-        lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
-        lcdNumber->setGeometry(QRect(0, 0, 241, 41));
-        QFont font;
-        font.setBold(true);
-        font.setWeight(75);
-        lcdNumber->setFont(font);
-        lcdNumber->setFrameShape(QFrame::StyledPanel);
-        lcdNumber->setFrameShadow(QFrame::Sunken);
-        lcdNumber->setSmallDecimalPoint(false);
-        lcdNumber->setDigitCount(15);
-        lcdNumber->setMode(QLCDNumber::Dec);
-        lcdNumber->setSegmentStyle(QLCDNumber::Filled);
         pushButton_ac = new QPushButton(centralWidget);
         pushButton_ac->setObjectName(QStringLiteral("pushButton_ac"));
         pushButton_ac->setGeometry(QRect(0, 40, 61, 61));
-        QFont font1;
-        font1.setPointSize(12);
-        font1.setBold(true);
-        font1.setWeight(75);
-        pushButton_ac->setFont(font1);
+        QFont font;
+        font.setPointSize(12);
+        font.setBold(true);
+        font.setWeight(75);
+        pushButton_ac->setFont(font);
         pushButton_ac->setStyleSheet(QLatin1String("QPushButton {\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
@@ -85,7 +72,7 @@ public:
         pushButton_plusminus = new QPushButton(centralWidget);
         pushButton_plusminus->setObjectName(QStringLiteral("pushButton_plusminus"));
         pushButton_plusminus->setGeometry(QRect(60, 40, 61, 61));
-        pushButton_plusminus->setFont(font1);
+        pushButton_plusminus->setFont(font);
         pushButton_plusminus->setStyleSheet(QLatin1String("QPushButton {\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
@@ -97,7 +84,7 @@ public:
         pushButton_percent = new QPushButton(centralWidget);
         pushButton_percent->setObjectName(QStringLiteral("pushButton_percent"));
         pushButton_percent->setGeometry(QRect(120, 40, 61, 61));
-        pushButton_percent->setFont(font1);
+        pushButton_percent->setFont(font);
         pushButton_percent->setStyleSheet(QLatin1String("QPushButton {\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
@@ -109,7 +96,7 @@ public:
         pushButton_del = new QPushButton(centralWidget);
         pushButton_del->setObjectName(QStringLiteral("pushButton_del"));
         pushButton_del->setGeometry(QRect(180, 40, 61, 61));
-        pushButton_del->setFont(font1);
+        pushButton_del->setFont(font);
         pushButton_del->setStyleSheet(QLatin1String("QPushButton {\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
@@ -123,7 +110,7 @@ public:
         pushButton_4 = new QPushButton(centralWidget);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
         pushButton_4->setGeometry(QRect(0, 160, 61, 61));
-        pushButton_4->setFont(font1);
+        pushButton_4->setFont(font);
         pushButton_4->setStyleSheet(QLatin1String("QPushButton {\n"
 "   border: 1px solid gray;\n"
 "}\n"
@@ -134,7 +121,7 @@ public:
         pushButton_5 = new QPushButton(centralWidget);
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
         pushButton_5->setGeometry(QRect(60, 160, 61, 61));
-        pushButton_5->setFont(font1);
+        pushButton_5->setFont(font);
         pushButton_5->setStyleSheet(QLatin1String("QPushButton {\n"
 "   border: 1px solid gray;\n"
 "}\n"
@@ -145,7 +132,7 @@ public:
         pushButton_plus = new QPushButton(centralWidget);
         pushButton_plus->setObjectName(QStringLiteral("pushButton_plus"));
         pushButton_plus->setGeometry(QRect(180, 160, 61, 61));
-        pushButton_plus->setFont(font1);
+        pushButton_plus->setFont(font);
         pushButton_plus->setStyleSheet(QLatin1String("QPushButton {\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
@@ -159,7 +146,7 @@ public:
         pushButton_6 = new QPushButton(centralWidget);
         pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
         pushButton_6->setGeometry(QRect(120, 160, 61, 61));
-        pushButton_6->setFont(font1);
+        pushButton_6->setFont(font);
         pushButton_6->setStyleSheet(QLatin1String("QPushButton {\n"
 "   border: 1px solid gray;\n"
 "}\n"
@@ -170,7 +157,7 @@ public:
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
         pushButton_3->setGeometry(QRect(120, 220, 61, 61));
-        pushButton_3->setFont(font1);
+        pushButton_3->setFont(font);
         pushButton_3->setStyleSheet(QLatin1String("QPushButton {\n"
 "   border: 1px solid gray;\n"
 "}\n"
@@ -181,7 +168,7 @@ public:
         pushButton_1 = new QPushButton(centralWidget);
         pushButton_1->setObjectName(QStringLiteral("pushButton_1"));
         pushButton_1->setGeometry(QRect(0, 220, 61, 61));
-        pushButton_1->setFont(font1);
+        pushButton_1->setFont(font);
         pushButton_1->setStyleSheet(QLatin1String("QPushButton {\n"
 "   border: 1px solid gray;\n"
 "}\n"
@@ -192,7 +179,7 @@ public:
         pushButton_min = new QPushButton(centralWidget);
         pushButton_min->setObjectName(QStringLiteral("pushButton_min"));
         pushButton_min->setGeometry(QRect(180, 220, 61, 61));
-        pushButton_min->setFont(font1);
+        pushButton_min->setFont(font);
         pushButton_min->setStyleSheet(QLatin1String("QPushButton {\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
@@ -206,7 +193,7 @@ public:
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         pushButton_2->setGeometry(QRect(60, 220, 61, 61));
-        pushButton_2->setFont(font1);
+        pushButton_2->setFont(font);
         pushButton_2->setStyleSheet(QLatin1String("QPushButton {\n"
 "   border: 1px solid gray;\n"
 "}\n"
@@ -217,7 +204,7 @@ public:
         pushButton_0 = new QPushButton(centralWidget);
         pushButton_0->setObjectName(QStringLiteral("pushButton_0"));
         pushButton_0->setGeometry(QRect(0, 280, 121, 61));
-        pushButton_0->setFont(font1);
+        pushButton_0->setFont(font);
         pushButton_0->setStyleSheet(QLatin1String("QPushButton {\n"
 "   border: 1px solid gray;\n"
 "}\n"
@@ -228,7 +215,7 @@ public:
         pushButton_dot = new QPushButton(centralWidget);
         pushButton_dot->setObjectName(QStringLiteral("pushButton_dot"));
         pushButton_dot->setGeometry(QRect(120, 280, 61, 61));
-        pushButton_dot->setFont(font1);
+        pushButton_dot->setFont(font);
         pushButton_dot->setStyleSheet(QLatin1String("QPushButton {\n"
 "  background-color: rgb(215, 215, 215);\n"
 "  border: 1px solid gray;\n"
@@ -240,7 +227,7 @@ public:
         pushButton_total = new QPushButton(centralWidget);
         pushButton_total->setObjectName(QStringLiteral("pushButton_total"));
         pushButton_total->setGeometry(QRect(180, 280, 61, 61));
-        pushButton_total->setFont(font1);
+        pushButton_total->setFont(font);
         pushButton_total->setStyleSheet(QLatin1String("QPushButton {\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
@@ -254,7 +241,7 @@ public:
         pushButton_9 = new QPushButton(centralWidget);
         pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
         pushButton_9->setGeometry(QRect(120, 100, 61, 61));
-        pushButton_9->setFont(font1);
+        pushButton_9->setFont(font);
         pushButton_9->setStyleSheet(QLatin1String("QPushButton {\n"
 "   border: 1px solid gray;\n"
 "}\n"
@@ -265,7 +252,7 @@ public:
         pushButton_7 = new QPushButton(centralWidget);
         pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
         pushButton_7->setGeometry(QRect(0, 100, 61, 61));
-        pushButton_7->setFont(font1);
+        pushButton_7->setFont(font);
         pushButton_7->setStyleSheet(QLatin1String("QPushButton {\n"
 "   border: 1px solid gray;\n"
 "}\n"
@@ -276,7 +263,7 @@ public:
         pushButton_mul = new QPushButton(centralWidget);
         pushButton_mul->setObjectName(QStringLiteral("pushButton_mul"));
         pushButton_mul->setGeometry(QRect(180, 100, 61, 61));
-        pushButton_mul->setFont(font1);
+        pushButton_mul->setFont(font);
         pushButton_mul->setStyleSheet(QLatin1String("QPushButton {\n"
 "  background-color: rgb(255, 151, 57);\n"
 "  color: white; \n"
@@ -290,7 +277,7 @@ public:
         pushButton_8 = new QPushButton(centralWidget);
         pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
         pushButton_8->setGeometry(QRect(60, 100, 61, 61));
-        pushButton_8->setFont(font1);
+        pushButton_8->setFont(font);
         pushButton_8->setStyleSheet(QLatin1String("QPushButton {\n"
 "   border: 1px solid gray;\n"
 "}\n"
@@ -298,6 +285,21 @@ public:
 "    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
 "                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
 "}"));
+        lcdNumber = new QLabel(centralWidget);
+        lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
+        lcdNumber->setGeometry(QRect(0, 0, 241, 41));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Onyx"));
+        font1.setPointSize(20);
+        font1.setBold(true);
+        font1.setWeight(75);
+        lcdNumber->setFont(font1);
+        lcdNumber->setStyleSheet(QLatin1String("QLabel {\n"
+"  qproperty-alignment: 'AlignVCenter | AlignRight';\n"
+"  border: 1px solid gray;\n"
+"}\n"
+"\n"
+"background-color : white;"));
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
@@ -327,6 +329,7 @@ public:
         pushButton_7->setText(QApplication::translate("MainWindow", "7", 0));
         pushButton_mul->setText(QApplication::translate("MainWindow", "*", 0));
         pushButton_8->setText(QApplication::translate("MainWindow", "8", 0));
+        lcdNumber->setText(QApplication::translate("MainWindow", "0", 0));
     } // retranslateUi
 
 };

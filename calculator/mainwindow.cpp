@@ -7,9 +7,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowIcon(QPixmap(":/resources/img/icon.png"));
-    setFixedSize(239,339);
-    ui->lcdNumber->setDigitCount(6);
+    setWindowIcon(QPixmap(":/resources/img/icon.png")); // setup window icon
+    setFixedSize(239,339); // size of windowed application
 
     connect(ui->pushButton_0,SIGNAL(clicked()),this,SLOT(digit_numbers()));
     connect(ui->pushButton_1,SIGNAL(clicked()),this,SLOT(digit_numbers()));
@@ -22,6 +21,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_8,SIGNAL(clicked()),this,SLOT(digit_numbers()));
     connect(ui->pushButton_9,SIGNAL(clicked()),this,SLOT(digit_numbers()));
 
+    connect(ui->pushButton_dot,SIGNAL(clicked()),this,SLOT(float_numbers()));
+
 }
 
 MainWindow::~MainWindow()
@@ -29,14 +30,20 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::digit_numbers()
+void MainWindow::digit_numbers() // function of call digital input numbers
 {
-    QPushButton *button = (QPushButton *)sender();
+    QPushButton *button = (QPushButton *)sender(); // method to recieve text from buttons
 
     double all_numbers;
 
-    all_numbers = (QString::number(ui->lcdNumber->value())+button->text()).toDouble();
+    all_numbers = (ui->lcdNumber->text()+button->text()).toDouble(); // converting input number to string value
 
-    ui->lcdNumber->display(QString::number(all_numbers));
+    ui->lcdNumber->setText(QString::number(all_numbers,'g',10));
     qDebug()<<all_numbers;
+}
+
+void MainWindow::float_numbers()
+{
+//    qDebug()<<(QString::number(ui->lcdNumber->value())+'.').toDouble();
+//    ui->lcdNumber->setText(12.123);
 }

@@ -16,6 +16,7 @@ public:
     ~MainWindow();
 public slots:
     void digit_numbers();
+    void float_numbers();
 private:
     Ui::MainWindow *ui;
 };
