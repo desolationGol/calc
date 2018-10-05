@@ -57,17 +57,20 @@ public:
         pushButton_ac->setObjectName(QStringLiteral("pushButton_ac"));
         pushButton_ac->setGeometry(QRect(0, 40, 61, 61));
         QFont font;
-        font.setPointSize(12);
-        font.setBold(true);
-        font.setWeight(75);
+        font.setFamily(QStringLiteral("Pixel Cyr"));
+        font.setPointSize(14);
+        font.setBold(false);
+        font.setWeight(50);
         pushButton_ac->setFont(font);
         pushButton_ac->setStyleSheet(QLatin1String("QPushButton {\n"
-"  background-color: rgb(215, 215, 215);\n"
+"  background-color: rgb(255, 50, 57);\n"
+"  color: white; \n"
 "  border: 1px solid gray;\n"
 "}\n"
+"\n"
 "QPushButton:pressed {\n"
 "    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);\n"
+"                                      stop: 0 #ff8139, stop: 1 #ff3139);\n"
 "}"));
         pushButton_plusminus = new QPushButton(centralWidget);
         pushButton_plusminus->setObjectName(QStringLiteral("pushButton_plusminus"));
@@ -289,10 +292,10 @@ public:
         lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
         lcdNumber->setGeometry(QRect(0, 0, 241, 41));
         QFont font1;
-        font1.setFamily(QStringLiteral("Onyx"));
+        font1.setFamily(QStringLiteral("Pixel Cyr"));
         font1.setPointSize(20);
-        font1.setBold(true);
-        font1.setWeight(75);
+        font1.setBold(false);
+        font1.setWeight(50);
         lcdNumber->setFont(font1);
         lcdNumber->setStyleSheet(QLatin1String("QLabel {\n"
 "  qproperty-alignment: 'AlignVCenter | AlignRight';\n"

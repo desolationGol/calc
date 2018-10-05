@@ -25,19 +25,22 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-  background-color: rgb(215, 215, 215);
+  background-color: rgb(255, 50, 57);
+  color: white; 
   border: 1px solid gray;
 }
+
 QPushButton:pressed {
     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);
+                                      stop: 0 #ff8139, stop: 1 #ff3139);
 }</string>
     </property>
     <property name="text">
@@ -55,9 +58,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -85,9 +89,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -115,9 +120,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -147,9 +153,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -176,9 +183,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -205,9 +213,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -237,9 +246,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -266,9 +276,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -295,9 +306,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -324,9 +336,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -356,9 +369,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -385,9 +399,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -414,9 +429,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -444,9 +460,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -476,9 +493,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -505,9 +523,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -534,9 +553,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -566,9 +586,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Pixel Cyr</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -595,10 +616,10 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <family>Onyx</family>
+      <family>Pixel Cyr</family>
       <pointsize>20</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">

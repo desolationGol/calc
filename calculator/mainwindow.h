@@ -14,9 +14,24 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-public slots:
+
+    QString currentNumb;
+    double bufferNumb;
+
+    bool enablePlus;
+    bool enableMin;
+    bool enableMul;
+    bool enableDev;
+
+    bool enableInput;
+private slots:
     void digit_numbers();
     void float_numbers();
+    void operations();
+    void math_operations();
+    void total();
+
+    QString currentValue();
 private:
     Ui::MainWindow *ui;
 };
