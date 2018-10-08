@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     enableMul = true;
     enableDev = true;
 
-    enableInput = false;
+    enableInput = true;
 
     connect(ui->pushButton_0,SIGNAL(clicked()),this,SLOT(digit_numbers()));
     connect(ui->pushButton_1,SIGNAL(clicked()),this,SLOT(digit_numbers()));
@@ -111,55 +111,44 @@ void MainWindow::operations()
 
 void MainWindow::math_operations()
 {
+    enableInput=!enableInput;
     QPushButton *button = (QPushButton *)sender(); // method to recieve text from buttons
     bufferNumb = ui->lcdNumber->text().toDouble();
     button->setChecked(true);
-    ui->lcdNumber->setText("0");
-    qDebug()<<1;
-//    if(!enableInput)
-//    {
-
-//        enableInput = true;
-//    }
-//    else
-//    {
-//        enableInput = false;
-
-    }
+    ui->lcdNumber->setText("");
 
 
-
+}
 void MainWindow::total()
 {
-     qDebug()<<2;
+
     double all_numbers;
     if(ui->pushButton_plus->isChecked())
     {
         all_numbers = bufferNumb+currentValue().toDouble(); // converting input number to string value
-        ui->lcdNumber->setText(QString::number(all_numbers,'g',10));
+        ui->pushButton_plus->setChecked(false);
     }
     else if(ui->pushButton_min->isChecked())
     {
         all_numbers = bufferNumb-currentValue().toDouble(); // converting input number to string value
-        ui->lcdNumber->setText(QString::number(all_numbers,'g',10));
+        ui->pushButton_min->setChecked(false);
     }
     else if(ui->pushButton_mul->isChecked())
     {
         all_numbers = bufferNumb*currentValue().toDouble(); // converting input number to string value
-        ui->lcdNumber->setText(QString::number(all_numbers,'g',10));
+        ui->pushButton_mul->setChecked(false);
     }
     else if(ui->pushButton_del->isChecked())
     {
         all_numbers = bufferNumb/currentValue().toDouble(); // converting input number to string value
-        ui->lcdNumber->setText(QString::number(all_numbers,'g',10));
-    }
+        ui->pushButton_del->setChecked(false);
+    }else qDebug()<<"over";
+    ui->lcdNumber->setText(QString::number(all_numbers,'g',10));
 }
-
 QString MainWindow::currentValue()
 {
    return currentNumb=ui->lcdNumber->text();
 }
-
 void MainWindow::on_pushButton_ac_clicked()
 {
     currentNumb.clear();

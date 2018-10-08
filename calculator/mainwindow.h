@@ -15,8 +15,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    double all_numbers;
     QString currentNumb;
     double bufferNumb;
+    double bufferNumbNext;
 
     bool enablePlus;
     bool enableMin;
